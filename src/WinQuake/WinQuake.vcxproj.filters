@@ -90,9 +90,6 @@
     <ClCompile Include="d_zpoint.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="dos_v2.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="draw.c">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -115,9 +112,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="model.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="net_bw.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="net_dgrm.c">
@@ -223,9 +217,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="sys_win.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="sys_wind.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="vid_win.c">
@@ -387,6 +378,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="adivtab.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dosisms.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

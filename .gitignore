@@ -3,3 +3,4 @@
 *.user
 src/WinQuake/Debug/
 src/packages/
+src/Debug/
