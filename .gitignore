@@ -4,3 +4,5 @@
 src/WinQuake/Debug/
 src/packages/
 src/Debug/
+src/WinQuake/Release/
+src/WinQuake/Id1/

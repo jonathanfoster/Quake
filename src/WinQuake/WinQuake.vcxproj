@@ -71,19 +71,23 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)\WinQuake\scitech\INCLUDE;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)WinQuake\scitech\INCLUDE;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)WinQuake\scitech\LIB\WIN32\VC;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)\WinQuake\scitech\INCLUDE;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)WinQuake\scitech\INCLUDE;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)WinQuake\scitech\LIB\WIN32\VC;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(SolutionDir)\WinQuake\scitech\INCLUDE;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)WinQuake\scitech\INCLUDE;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)WinQuake\scitech\LIB\WIN32\VC;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(SolutionDir)\WinQuake\scitech\INCLUDE;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)WinQuake\scitech\INCLUDE;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)WinQuake\scitech\LIB\WIN32\VC;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -100,6 +104,8 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>winmm.lib;dxguid.lib;wsock32.lib;mgllt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>libc.lib</IgnoreSpecificDefaultLibraries>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -117,6 +123,8 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>winmm.lib;dxguid.lib;wsock32.lib;mgllt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>libc.lib</IgnoreSpecificDefaultLibraries>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -137,6 +145,8 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>winmm.lib;dxguid.lib;wsock32.lib;mgllt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>libc.lib</IgnoreSpecificDefaultLibraries>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -157,6 +167,8 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>winmm.lib;dxguid.lib;wsock32.lib;mgllt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>libc.lib</IgnoreSpecificDefaultLibraries>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -200,6 +212,7 @@
     <ClCompile Include="net_win.c" />
     <ClCompile Include="net_wins.c" />
     <ClCompile Include="net_wipx.c" />
+    <ClCompile Include="nonintel.c" />
     <ClCompile Include="pr_cmds.c" />
     <ClCompile Include="pr_edict.c" />
     <ClCompile Include="pr_exec.c" />
